@@ -13,6 +13,8 @@ To provide the best solution possible we have decomposed our solution into two p
  
 - **MediusFlow Data Services**. The MediusFlow Data Services store the data for the application for each customer. Key components of the MediusFlow Data Services are the Microsoft Azure SQL Database and files (images and other attachments) stored on Microsoft Azure Storage.
 
+![overview]({{ site.url }}/assets/high-availability-and-disaster-recovery/overview.png)
+
 # MediusFlow Application Services
 
 ## High Availability
@@ -21,8 +23,12 @@ The most important characteristics of this part of the application is that it do
 ### Failure without downtime
 The Web Frontend and Application Backend both consists of several (2 or more) instances that are allowed to fail independently. All communication is routed through a load balancer that will redirect data traffic if one of the instances should no longer be responsive. 
 
+![failure-without-downtime]({{ site.url }}/assets/high-availability-and-disaster-recovery/failure-without-downtime.png)
+
 ### Unresponsive instances are automatically replaced
 The Microsoft Azure Fabric Controller is responsible for provisioning and monitoring the health of the Microsoft Azure compute instances. The Fabric Controller listens for heartbeats from the hardware and software of the host and guest machine instances. When a failure is detected, it enforces SLAs by automatically replace the failing instances by creating new ones. 
+
+![unresponsive-instances-are-automatically-replaced]({{ site.url }}/assets/high-availability-and-disaster-recovery/unresponsive-instances-are-automatically-replaced.png)
 
 ### Fault domains ensure no single points of failure
 When multiple instances are deployed, Microsoft Azure deploys these instances to different fault domains. A fault domain boundary is basically a different hardware rack in the same datacenter. Fault domains reduce the probability that a localized hardware failure will interrupt the service of an application.
