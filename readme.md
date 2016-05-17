@@ -1,6 +1,6 @@
 # Install
 
-First install [ruby](http://rubyinstaller.org/).
+First install [ruby](http://rubyinstaller.org/). (Make sure to add Ruby to PATH during installation.)
 
 2nd in CMD:
 
