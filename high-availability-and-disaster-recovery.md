@@ -1,12 +1,12 @@
 ---
 layout: default
-title: High Availability & <br/> Disaster Recovery
+title: High Availability & Disaster Recovery
 permalink: /high-availability-and-disaster-recovery/
 group: "navigation"
-test: Hejsan
+navigation-title: High Availability & <br/> Disaster Recovery
 ---
 
-# Introduction
+# MediusFlow overview
 MediusFlow Cloud is a software as a services solution delivered by Medius. The service is built upon the Microsoft Azure platform from Microsoft. An important part of the MediusFlow Cloud offering is for us to keep the application available to the customers and also be able to restore data. This white paper intends to explain how we leverage the Microsoft Azure platform to deliver High Availability and plan for Disaster Recovery. 
 
 To provide the best solution possible we have decomposed our solution into two parts. This allows us to implement the best fitting strategy for the characteristics of each part. The two parts are:
@@ -18,10 +18,10 @@ To provide the best solution possible we have decomposed our solution into two p
 ![overview]({{ site.url }}/assets/high-availability-and-disaster-recovery/overview.png)
 
 
-# MediusFlow Application Services
+# MediusFlow application services
 
 
-## High Availability
+## High availability
 The most important characteristics of this part of the application is that it does not hold any persistent information. The approach to high availability is therefore to allow for each instance running the Web Frontend or application server to fail and be automatically restored. 
 
 ### Failure without downtime
@@ -37,27 +37,27 @@ The Microsoft Azure Fabric Controller is responsible for provisioning and monito
 ### Fault domains ensure no single points of failure
 When multiple instances are deployed, Microsoft Azure deploys these instances to different fault domains. A fault domain boundary is basically a different hardware rack in the same datacenter. Fault domains reduce the probability that a localized hardware failure will interrupt the service of an application.
 
-## Disaster Recovery
+## Disaster recovery
 Since no persistent data is ever stored in this part of the application the disaster recovery scenario does not require any data restores. All that will happen is that the application code will be deployed to new machines described in the High Availability scenarios.
 
 In the very unlikely that a complete Microsoft Azure Data Center goes down for an extended period of time all computing instances will be re-created in another data center. This event would require manual steps but the general approach are still the same.
 
-# MediusFlow Data Services
+# MediusFlow data services
 
-## High Availability
+## High availability
 High availability setup for these components are very much delivered by the Microsoft Azure platform.
 
-### Microsoft Azure SQL Database
+### Microsoft Azure SQL database
 Microsoft Azure SQL Database mitigates outages due to failures of individual devices, such as hard drives, network interface adapters, or even entire servers. Data durability and fault tolerance is enhanced by maintaining multiple copies of all data in different physical nodes located across fully independent physical sub-systems such as server racks and network routers. At any one time, Microsoft Azure SQL Database keeps three replicas of data running—one primary replica and two secondary replicas.
 
 Microsoft Azure SQL Database uses a quorum based commit scheme where data is written to the primary and one secondary replica before we consider the transaction committed. If the hardware fails on the primary replica, the Microsoft Azure SQL Database detects the failure and fails over to the secondary replica. In case of a physical loss of the replica, Microsoft Azure SQL Database creates a new replica automatically. Therefore, there are at least two physical transactionally consistent copies of each database in the data center. 
 
-### Microsoft Azure Storage
+### Microsoft Azure storage
 Data durability for Microsoft Azure Storage is facilitated by maintaining multiple copies of all data on different drives located across fully independent physical storage sub-systems within the region. Data is replicated synchronously and all copies are committed before the write is acknowledged. 
 
 Microsoft Azure Storage is strongly consistent, meaning that reads are guaranteed to reflect the most recent writes. In addition, copies of data are continually scanned to detect and repair bit rot, an often overlooked threat to the integrity of stored data. 
 
-## Disaster Recovery
+## Disaster recovery
 The built-in fault tolerance capabilities of Microsoft Azure protect customer data from individual server, network, and device failures. However, in order to protect customer data against user or application errors, or a total loss of a region, Medius does also create separate backup of the data. 
 
 ### Data backup strategy
