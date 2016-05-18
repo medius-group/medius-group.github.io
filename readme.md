@@ -5,8 +5,8 @@ First install [ruby](http://rubyinstaller.org/). (Make sure to add Ruby to PATH 
 2nd in CMD:
 
 ```
-gem install ruby
-git clone http://mattiasw@git.medius.local/scm/mcop/trust.mediusflow.com.git
+gem install jekyll
+git clone http://git.medius.local/scm/mcop/trust.mediusflow.com.git
 cd trust.mediusflow.com
 jekyll serve
 ```
