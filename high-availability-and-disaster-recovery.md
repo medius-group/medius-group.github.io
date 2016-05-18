@@ -1,7 +1,9 @@
 ---
 layout: default
-title: High Availability & Disaster Recovery
+title: High Availability & <br/> Disaster Recovery
 permalink: /high-availability-and-disaster-recovery/
+group: "navigation"
+test: Hejsan
 ---
 
 # Introduction
@@ -15,7 +17,9 @@ To provide the best solution possible we have decomposed our solution into two p
 
 ![overview]({{ site.url }}/assets/high-availability-and-disaster-recovery/overview.png)
 
+
 # MediusFlow Application Services
+
 
 ## High Availability
 The most important characteristics of this part of the application is that it does not hold any persistent information. The approach to high availability is therefore to allow for each instance running the Web Frontend or application server to fail and be automatically restored. 
@@ -62,7 +66,7 @@ To protect customer data from disaster Medius copies all data backups to a data 
 The table below outlines the intervals when data backups are taken. This intervals is the same as the RPO (Recovery Point Objective) for the data. That is the most data that can be lost in the event of disaster. 
 
 | Type of data    | Backup interval    |
-|:-------------|:---------------:|
+|-------------|---------------|
 | Database | Every 1 h |
 | File storage | Every 6 h |
 
