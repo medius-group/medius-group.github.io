@@ -7,68 +7,48 @@ navigation-title: Upgrade & <br/> Release management
 weight: 4
 ---
 
-# Data protection and privacy
+# Release process
+The release process covers all parts from the Code freeze until the release is in production for all customers. Release test & packaging is the Development organizations process to create a release development items. Cloud Deployment is Cloud Operations process to deploy the release to all cloud environments.
 
-## Separation of customer data
+![release-process]({{ site.url }}/assets/upgrade-and-release-management/release-process.png)
 
-Customer data is separated in unique SQL databases for each customer.
+## Release test & packaging
 
-## Location of customer data
+The following is done during Release test & packaging:
 
-All customer data is stored in Europe or US depending on the customer's primary location. No storage data is transferred between Europe and US locations.
+-	Regression Testing of the release based on test plans
+-	Finish Documentation – End-user-, Technical- and Release-Documentation
+-	Act on results – fix bugs if needed, document known limitations
 
-| Customer location    | Data storage location    |
+Iterate if necessary.
+Decision point: Once all the above is done, a summary of all changes is done to make sure that everything is correct before the Release Candidate is made. Content is as follows:
+
+-	Is the release content correct? All changes in GIT is included in Jira and are correct.
+-	Workflow followed and done for all Development Items?
+-	All automated tests are passing
+-	Source code control is correct.
+-	Regression tests are passing; any exceptions are carefully documented.
+-	No known issues/bugs that prevents further processing.
+-	All documentation is correct and available.
+
+Decision is taken by the Director of R&D
+
+## Cloud deployment
+
+Cloud Deployment is the process where the Release Candidate is put into production. 
+
+### Validating deployment of the release
+
+- **Subset of QA Deployments**: The release candidate is deployed to a subset of customers’ QA environments. The environments are monitored by Cloud Operations team (application & server metrics, logs, etc.). Potential errors or question marks are examined based on a checklist. 
+
+- **Subset Production Deployment**: The release candidate is deployed to a subset of customers’ Prod environments. The examination process is similar as for the subset of QA deployments. 
+
+- **Remaining Deployment**: After successful validation of Subset of Production deployments the release is deployed to the remaining deployments.
+
+# Release planning
+
+| Area | Guideline |
 |-------------|---------------|
-| Europe | Ireland and Netherland |
-| US | Virginia and California |
-
-## Retention policies
-
-Medius store customer data as long as the customer is using MediusFlow. If the customer will no longer use MediusFlow all customer data will be removed from MediusFlow cloud. Before data is removed the data can be exported to the customer using a format agreed between the customer and Medius.
-
-## Customer data and 3rd parties
-Medius will not disclose customer data to a third party (including law enforcement, other government entity or civil litigant) except by request from customer or required by law. Should a third party contact us with a demand for customer data, we will attempt to redirect the third party to request it directly from the customer. As part of that, we may provide your basic contact information to the third party. If compelled to disclose customer data to a third party, we will promptly notify the customer and provide a copy of the demand, unless legally prohibited from doing so.
-
-- [Microsofts policy for Microsoft Azure](http://www.windowsazure.com/en-us/support/trust-center/faq/)
-
-## Medius employee access to customer data 
-
-Only Medius personnel required to access customer data to execute agreed activities may do so. In practice this means that all production data credentials are per default only available to Cloud Operations Team. Due to requirements from implementation projects additional consultants may get similar permissions but only for individual customers.
-
-Restriced access is enforcedby the following guidelines for credentials related to customer data:
-
-- Shared credentials are stored in systems allowing restricted access based on roles or individuals.
-- Credentials are generated with at least 12 characters (including numbers and special characters).
-- 2 factor authentication and periodically passwords updates are used where applicable.
-- User accounts and credentials are reviewed quarterly.
-
-Process for on-boarding new employees:
-
-- Employee participate in introduction to cloud environments.
-- Employee's individual credentials are granted access to cloud tools and application by Cloud Operations Manager.
-- Employee is granted access to shared credentials by Cloud Operations Manager.
-
-Process for terminating employee accounts:
-
-- Process for termination of employee accounts is initiated by Cloud Operations Manager or Human Resources.
-- Individual credentials are revoked.
-- Access to shared credentials are also revoked. 
-
-# Certifications
-
-## Medius AB
-
-![SOC type 1]({{ site.url }}/assets/compliance/SOC-1.png)
-
-*Medius is working according to ISO 27001.*
-
-## Microsoft Azure
-
-![ISO27018]({{ site.url }}/assets/compliance/CSA.png)
-![SOC type 1]({{ site.url }}/assets/compliance/SOC-1.png)
-![SOC type 2]({{ site.url }}/assets/compliance/SOC-2.png)
-![SOC type 3]({{ site.url }}/assets/compliance/SOC-3.png)
-![ISO27001]({{ site.url }}/assets/compliance/ISO27001.png)
-![ISO27018]({{ site.url }}/assets/compliance/ISO27018.png)
-
-*More about Azure compliance [here](https://www.microsoft.com/en-us/trustcenter/Compliance).*
+| Time | Should always be planned outside office hours. |
+| Months end | Upgrades should NEVER be planned (-5) to 5 work days around months end. <br/> E.g. NOT 22th January - 8rd February 2016. <br/><br/> It is RECOMMENDED not to plan updates (-7) to 7 work days arounds months end. <br/> E.g. NOT 20th January - 10th February 2016.
+| Information |	Date and time should be announced on external dashboard at least 7 days in advance. <br/><br/> Information mail should be sent at least 7 days in advance to subscribing users.
