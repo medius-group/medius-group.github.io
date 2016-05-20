@@ -4,6 +4,7 @@ title: Data protection and compliance
 permalink: /data-protection-and-compliance/
 group: "navigation"
 navigation-title: Data protection & <br/> Compliance
+weight: 2
 ---
 
 # Data protection and privacy

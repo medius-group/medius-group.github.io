@@ -5,6 +5,7 @@
     <div class="site-logo">
         <a href="{{ site.baseurl }}/"><img src="/assets/shared/logo-header.png" width="208" height="51"></a> 
         <!--<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>-->
+        <p class="trust-header">Trust Center</p>
     </div>
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -17,7 +18,7 @@
 
       <div class="trigger">
         <ul class="trigger-list">
-            {% assign pages_list = site.pages %}
+            {% assign pages_list = site.pages | sort:"weight" %}
             {% assign group = 'navigation' %}
             {% include pages_list %}
         </ul>

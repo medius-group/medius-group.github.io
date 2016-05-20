@@ -1,9 +1,10 @@
 ---
 layout: default
-title: High Availability & Disaster Recovery
+title: High availability & Disaster recovery
 permalink: /high-availability-and-disaster-recovery/
 group: "navigation"
-navigation-title: High Availability & <br/> Disaster Recovery
+navigation-title: High availability & <br/> Disaster recovery
+weight: 3
 ---
 
 # MediusFlow overview

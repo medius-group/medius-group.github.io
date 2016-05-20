@@ -33,9 +33,12 @@
 }
 
 .site-logo {
-    margin: 33px 0 0 0;
+    margin: 15px 0 0 0;
     float: left;
 
+    .trust-header {
+        font-size: 24px;
+    }
 }
 
 .site-nav {
@@ -69,7 +72,6 @@
                 //text-transform: uppercase;
                 display: inline-block;
                 
-                text-transform: uppercase;
           
                 
                 line-height: 22px;
@@ -80,7 +82,7 @@
                     display: block;
                     color: #363645;
                     font-weight: 700;
-                    padding: 10px 10px 15px 10px;
+                    padding: 30px 10px 15px 10px;
                     &:hover {
                         text-decoration: none;
                         color: #fe4444;
@@ -91,7 +93,7 @@
                 
                 
                 &:not(:last-child) {
-                    margin-right: 20px;
+                    margin-right: 0px;
                 }
                 
                 &:hover {
@@ -344,7 +346,7 @@ h1:after {
 }
 
 .slogan {
-    font-size: 60px;
+    font-size: 38px;
     padding-top: 120px;
     color: #fff;
     font-weight: 500;
