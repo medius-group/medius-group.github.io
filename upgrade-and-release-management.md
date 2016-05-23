@@ -3,8 +3,8 @@ layout: default
 title: Upgrade & Release management
 permalink: /upgrade-and-release-management/
 group: "navigation"
-navigation-title: Upgrade & <br/> Release management
-weight: 4
+navigation-title: Release 
+weight: 3
 ---
 
 # Release process

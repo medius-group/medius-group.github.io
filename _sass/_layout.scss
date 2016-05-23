@@ -6,7 +6,7 @@
     //border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
     width: 100%;
-    background-color: #fff;
+    background-color: #363645;
     z-index:9999;
 
     // Positioning context for the mobile navigation icon
@@ -15,7 +15,8 @@
  
 }
 .is-scrolling {
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
 }
 
 .site-title {
@@ -33,7 +34,7 @@
 }
 
 .site-logo {
-    margin: 15px 0 0 0;
+    margin: 16px;
     float: left;
 
     .trust-header {
@@ -42,9 +43,9 @@
 }
 
 .site-nav {
-    float: right;
+    float: left;
     line-height: 56px;
-    margin-top: 25px;
+    // margin-top: 25px;
 
     .menu-icon {
         display: none;
@@ -60,48 +61,49 @@
         }
     }
     
-    .trigger {
+    .trigger { 
         .trigger-list 
         {
             list-style-type: none;
             margin-bottom: 0;
-            vertical-align: bottom;
+            
             
             li {
-            
                 display: inline-block;
-                
-                
-                line-height: 22px;
-                
-                border-bottom: 4px solid #fff;
-                
+              
+                text-transform: uppercase;
+                height: 82px;
+            
+                // border-bottom: 4px solid #fff;
+    
                 a {
                     display: block;
-                    color: #363645;
-                    font-weight: 700;
-                    padding: 30px 10px 15px 10px;
+                    color: #fff;
+                    font-weight: 400;
+                    line-height: 82px;
+                    font-size: 16px;
+                    letter-spacing: 0.16px;
+                    padding: 0 16px;
+                    // padding: 0px 10px 15px 10px;
+                    // &:hover {
+                    //     text-decoration: none;
+                    //     color: #fe4444;
+                    // }
                     &:hover {
-                        text-decoration: none;
-                        color: #fe4444;
+                    // border-color: #fe4444;
+                        background-color: rgba(158,158,158,0.2);
+                        text-decoration: none;  
                     }
-
                 }
-                
-                
                 
                 &:not(:last-child) {
                     margin-right: 0px;
                 }
-                
-                &:hover {
-                    border-color: #fe4444;
-                }
+            
             }
             .active {
-                    
                     border-color: rgba(29,40,51,1);
-                }
+            }
         }
     }
 
@@ -231,8 +233,50 @@
  * Page content
  */
 .page-content {
+ 
     padding: $spacing-unit 0;
     
+    .page-content-header {
+        margin-top: 45px;
+        position: relative;
+        background-color: #363645;
+        background: linear-gradient(#363645,#707090);
+        padding: 80px 48px 56px;
+        height: 80px;
+        color: rgba(255,255,255, 1);
+    }
+    
+    .page-content-wrapper {
+        
+
+        // h1 {
+        //     font-size: 2.25em;
+        //     color: #363645;
+        //     font-weight: 700;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: center;
+        //     text-align: center;
+        //     margin-top: 1.25em;
+        //     &:first-of-type {
+        //         margin-top: 0;
+        //     }
+        // }
+        // h1:before, h1:after {
+        // background-color: #fe4444;
+        // content: '\a0';
+        // flex-grow: 1;
+        // height: 3px;
+        // position: relative;
+        // top: 0.7em;
+        // }
+        // h1:before {
+        // margin-right:15px;
+        // }
+        // h1:after {
+        // margin-left:15px;
+        // }
+    }
 }
 
 .page-heading {
@@ -306,34 +350,6 @@
 }
 
 
-h1 {
-    font-size: 2.25em;
-    color: #363645;
-    font-weight: 700;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1.25em;
-    &:first-of-type {
-        margin-top: 0;
-    }
-}
-h1:before, h1:after {
-  background-color: #fe4444;
-  content: '\a0';
-  flex-grow: 1;
-  height: 3px;
-  position: relative;
-  top: 0.7em;
-}
-h1:before {
-  margin-right:15px;
-}
-h1:after {
-  margin-left:15px;
-}
-
 .slogan-container {
    position: relative;
    height: 388px;
@@ -363,7 +379,7 @@ h1:after {
 // </div>
 
 .page-content-wrapper {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 table {

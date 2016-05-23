@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Status
-<<<<<<< HEAD
 permalink: /status/
 group: "navigation"
 navigation-title: Status
-weight: 1
+weight: 4
 ---
 
 # Status

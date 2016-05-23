@@ -3,8 +3,8 @@ layout: default
 title: Data protection and compliance
 permalink: /data-protection-and-compliance/
 group: "navigation"
-navigation-title: Data protection & <br/> Compliance
-weight: 2
+navigation-title: Data protection
+weight: 1
 ---
 
 # Data protection and privacy
