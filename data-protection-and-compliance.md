@@ -15,7 +15,7 @@ Customer data is separated in unique SQL databases for each customer.
 
 ## Location of customer data
 
-All customer data is stored in Europe or US depending on the customer's primary location. No storage data is transferred between Europe and US locations.
+All customer data is stored in Europe, US or Australia depending on the customer's primary location. No storage data is transferred between Europe and US locations.
 
 | Customer location    | Data storage location    |
 |-------------|---------------|
