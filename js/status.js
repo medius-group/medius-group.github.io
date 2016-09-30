@@ -7,13 +7,13 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true", funct
         var row='<tr><td>' + deployment.name + '</td>';
         $.each(deployment.sla, function (key1, sla) {
             if (sla.downtime > 0) {
-                status = 'outage'
+                row+='<td class="outage"></td>';
             }
             else {
-                status = 'ok'
+                row+='<td class="ok"></td>';
             }
             
-            row+='<td>'+status+'</td>';
+            
         })
         row+='</tr>'; 
         $('#status_table').append(row);
