@@ -21,6 +21,7 @@ All customer data is stored in Europe or US depending on the customer's primary 
 |-------------|---------------|
 | Europe | Ireland and Netherland |
 | US | Virginia and California |
+| Australia | Victoria and 	New South Wales |
 
 ## Retention policies
 
