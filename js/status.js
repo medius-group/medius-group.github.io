@@ -10,6 +10,14 @@ var monthOffset = 11;
 var firstDayCurrentMonth = new Date(year, month, 1);
 var firstDayStartMonth =  new Date(new Date(firstDayCurrentMonth).setMonth(firstDayCurrentMonth.getMonth() - monthOffset));
 
+if(window.location.hash) {
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      alert (hash);
+      // hash found
+  } else {
+      // No hash found
+  }
+
 var row = new Array();
 var j = -1; 
 row[++j] = '<tr><th>Cloud</th>';
@@ -26,7 +34,13 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
     $.each(data, function( key, deployment ) {
         var row = new Array();
         var j = -1;
-        row[++j] ='<tr><td>' + deployment.name + '</td>';
+        if (deployment.name == hash) {
+            row[++j] = '<tr class="highlight">'
+        }
+        else {
+            row[++j] = '<tr>'
+        }
+        row[++j] ='<td>' + deployment.name + '</td>';
         slaValue = ''
         for (var d = new Date(firstDayStartMonth); d < firstDayCurrentMonth; d.setMonth(d.getMonth() + 1)) {
             yearMonth = d.getFullYear() * 100 + d.getMonth() +1;
