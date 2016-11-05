@@ -9,10 +9,6 @@ weight: 1
 
 # Data protection and privacy
 
-## Separation of customer data
-
-Customer data is separated in unique SQL databases for each customer.
-
 ## Location of customer data
 
 All customer data is stored in Europe, US or Australia depending on the customer's primary location. No storage data is transferred between Europe and US locations.
@@ -34,7 +30,7 @@ Medius will not disclose customer data to a third party (including law enforceme
 
 ## Medius employee access to customer data 
 
-Only Medius personnel required to access customer data to execute agreed activities may do so. In practice this means that all production data credentials are per default only available to Cloud Operations Team. Due to requirements from implementation projects additional consultants may get similar permissions but only for individual customers.
+Only Medius personnel required to access customer data to execute agreed activities may do so. In practice this means that all production data credentials are per default only available to Cloud Operations Team.
 
 Restriced access is enforcedby the following guidelines for credentials related to customer data:
 
@@ -42,18 +38,6 @@ Restriced access is enforcedby the following guidelines for credentials related 
 - Credentials are generated with at least 12 characters (including numbers and special characters).
 - 2 factor authentication and periodically passwords updates are used where applicable.
 - User accounts and credentials are reviewed quarterly.
-
-Process for on-boarding new employees:
-
-- Employee participate in introduction to cloud environments.
-- Employee's individual credentials are granted access to cloud tools and application by Cloud Operations Manager.
-- Employee is granted access to shared credentials by Cloud Operations Manager.
-
-Process for terminating employee accounts:
-
-- Process for termination of employee accounts is initiated by Cloud Operations Manager or Human Resources.
-- Individual credentials are revoked.
-- Access to shared credentials are also revoked. 
 
 # Certifications
 
@@ -72,4 +56,4 @@ Process for terminating employee accounts:
 ![ISO27001]({{ site.url }}/assets/compliance/ISO27001.png)
 ![ISO27018]({{ site.url }}/assets/compliance/ISO27018.png)
 
-*More about Azure compliance [here](https://www.microsoft.com/en-us/trustcenter/Compliance).*
+*More about Microsoft Azure compliance [here](https://www.microsoft.com/en-us/trustcenter/Compliance).*
