@@ -37,7 +37,7 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
         else {
             row[++j] = '<tr>'
         }
-        row[++j] ='<td>' + deployment.name + '</td>';
+        row[++j] ='<td class="cloud">' + deployment.name + '</td>';
         slaValue = ''
         for (var d = new Date(firstDayStartMonth); d < firstDayCurrentMonth; d.setMonth(d.getMonth() + 1)) {
             yearMonth = d.getFullYear() * 100 + d.getMonth() +1;
