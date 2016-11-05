@@ -9,14 +9,11 @@ var currentTime = 100*year + month;
 var monthOffset = 11;
 var firstDayCurrentMonth = new Date(year, month, 1);
 var firstDayStartMonth =  new Date(new Date(firstDayCurrentMonth).setMonth(firstDayCurrentMonth.getMonth() - monthOffset));
+var hash = '';
 
 if(window.location.hash) {
-      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-      alert (hash);
-      // hash found
-  } else {
-      // No hash found
-  }
+      hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+}
 
 var row = new Array();
 var j = -1; 
