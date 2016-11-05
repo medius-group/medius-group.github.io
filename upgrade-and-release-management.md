@@ -12,32 +12,7 @@ The release process covers all parts from the Code freeze until the release is i
 
 ![release-process]({{ site.url }}/assets/upgrade-and-release-management/release-process.png)
 
-## Release test & packaging
-
-The following is done during Release test & packaging:
-
--	Regression Testing of the release based on test plans
--	Finish Documentation – End-user-, Technical- and Release-Documentation
--	Act on results – fix bugs if needed, document known limitations
-
-Iterate if necessary.
-Decision point: Once all the above is done, a summary of all changes is done to make sure that everything is correct before the Release Candidate is made. Content is as follows:
-
--	Is the release content correct? All changes in GIT is included in Jira and are correct.
--	Workflow followed and done for all Development Items?
--	All automated tests are passing
--	Source code control is correct.
--	Regression tests are passing; any exceptions are carefully documented.
--	No known issues/bugs that prevents further processing.
--	All documentation is correct and available.
-
-Decision is taken by the Director of R&D
-
-## Cloud deployment
-
-Cloud Deployment is the process where the Release Candidate is put into production. 
-
-### Validating deployment of the release
+## Validating deployment of the release
 
 - **Subset of QA Deployments**: The release candidate is deployed to a subset of customers’ QA environments. The environments are monitored by Cloud Operations team (application & server metrics, logs, etc.). Potential errors or question marks are examined based on a checklist. 
 
