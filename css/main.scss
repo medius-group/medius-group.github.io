@@ -8,7 +8,7 @@
 // Our variables
 $base-font-family: Roboto, sans-serif;
 $base-font-size:   0.9375rem;
-$base-font-weight: 400;
+$base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.75;
 
@@ -16,7 +16,7 @@ $spacing-unit:     30px;
 
 $text-color:       #163245;
 $background-color: #fff;
-$brand-color:      #2a7ae2;
+$brand-color:      #0070d2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -59,8 +59,6 @@ td.outage {background: #FFBC00}
 td.none {background: #F7F9FC}
 td.cloud {color: #54698D};
 tr.highlight {border: solid 2px #54698D; background: #d8edff;}
-
-h1 {font-size: 1.75rem;}
 
 img.spinner {
     display: block;

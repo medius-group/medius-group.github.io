@@ -165,6 +165,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background: #f6f6f6;
 }
 
 .footer-heading {
@@ -239,12 +240,18 @@
     .page-content-header {
         margin-top: 45px;
         position: relative;
-        background-color: #54698D;
-        //background: linear-gradient(#54698D,#4C5F7F);
-    background: linear-gradient(to bottom right, #0C8EFF, #24B5EF, #1EB7E5);
+        background: #0C8EFF;
+        background: -webkit-linear-gradient(left top, #0C8EFF, #24B5EF, #1EB7E5);
+        background: -o-linear-gradient(bottom right, #0C8EFF, #24B5EF, #1EB7E5);
+        background: -moz-linear-gradient(bottom right, #0C8EFF, #24B5EF, #1EB7E5);
+        background: linear-gradient(to bottom right, #0C8EFF, #24B5EF, #1EB7E5); /* Standard syntax */
         padding: 80px 48px 56px;
         height: 80px;
         color: rgba(255,255,255, 1);
+
+        h1 {
+            font-size: 1.75rem;
+        }
     }
     
     .page-content-wrapper {
