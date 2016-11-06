@@ -8,8 +8,8 @@
 # Site settings
 title: trust.mediusflow.com
 email: your-email@medius-group.com
-description: > # this means to ignore newlines until "baseurl:"
-  Trust.mediusflow.com is the MediusFlow's home for information on security and system performance.
+description: > # this means to ignore newlines until "baseurl:
+  Trust.mediusflow.com is MediusFlow's home for information on security and system performance in the cloud.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://medius-group.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
