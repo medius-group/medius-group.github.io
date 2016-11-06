@@ -57,34 +57,12 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
                 }
             });
             row[++j] ='<td class="' + status + '">' + slaValue.toString() + '</td>';
-            //row[++j] ='<td class="' + status + '"></td>';
         }
         row[++j] ='</tr>'; 
         $('#status_table').append(row.join(''));
         
     });
+
+    $('img.spinner').remove();
     
-    /*
-  var items = [];
-  var status = 'green';
-  $.each( data.sla, function( key, val ) {
-      console.log(val.time);
-      console.log(val.downtime);
-      if (val.downtime > 0) {
-          console.log('red');
-      }
-      if (val.downtime > 0) {
-          console.log('orange');
-      }
-      else {
-         console.log('green');
-      }
-    items.push( "<li id='" + key + "'>" + status + "</li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
- */ 
 });
