@@ -34,8 +34,11 @@
 }
 
 .site-logo {
-    margin: 16px;
+    margin-top: 21px;
+    margin-right: 16px;
     float: left;
+    margin-left: 35px;
+    margin-bottom: 21px;
 
     .trust-header {
         font-size: 24px;
@@ -80,10 +83,9 @@
                     display: block;
                     color: #fff;
                     font-weight: 400;
-                    line-height: 82px;
                     font-size: 16px;
                     letter-spacing: 0.16px;
-                    padding: 0 16px;
+                    padding: 13px 16px;
                     // padding: 0px 10px 15px 10px;
                     // &:hover {
                     //     text-decoration: none;
