@@ -54,6 +54,7 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
                     else {
                         status = 'outage';
                     }
+                    return false;
                 }
             });
             row[++j] ='<td class="' + status + '">' + slaValue.toString() + '</td>';
