@@ -45,11 +45,11 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
             $.each(deployment.sla, function (key1, sla) {
                 if (sla.time == yearMonth) {
                     slaValue = ((sla.uptime / (sla.uptime + sla.downtime)) * 100).toFixed(2);
-                    if (slaValue > 99.5) {
+                    if (slaValue >= 99) {
                         status = 'great';
                     }
-                    else if (slaValue > 99) {
-                        status = 'good';
+                    else if (slaValue > 98) {
+                        status = 'warning';
                     }
                     else {
                         status = 'outage';
@@ -57,7 +57,7 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
                     return false;
                 }
             });
-            row[++j] ='<td class="' + status + '">' + slaValue.toString() + '</td>';
+            row[++j] ='<td class="sla ' + status + '">' + slaValue.toString() + '</td>';
         }
         row[++j] ='</tr>'; 
         $('#status_table').append(row.join(''));

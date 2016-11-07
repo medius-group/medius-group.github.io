@@ -51,11 +51,14 @@ $on-laptop:        960px;
         "layout",
         "syntax-highlighting"
 ;
-td.sla {font-weight: 500; text-align:center; 
-    vertical-align:middle;}
+td.sla {
+    font-weight: 300; 
+    text-align:center; 
+    vertical-align:middle;
+    }
 td.great {background: linear-gradient(to right, #6AD110, #68C911)}
-td.good {background: linear-gradient(to right, #6ED811, #6AD110)}
-td.outage {background: #FFBC00}
+td.warning {background: linear-gradient(to right, #FFBC00, #E5A800)}
+td.outage {background:linear-gradient(to right, #F25959, #E55454)}
 td.none {background: #F7F9FC}
 td.cloud {color: #54698D};
 tr.highlight {border: solid 2px #074E8C; background: #d8edff;}
