@@ -46,7 +46,7 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
                 if (sla.time == yearMonth) {
                     slaValue = ((sla.uptime / (sla.uptime + sla.downtime)) * 100).toFixed(2);
                     if (slaValue >= 99) {
-                        status = 'great';
+                        status = 'good';
                     }
                     else if (slaValue > 98) {
                         status = 'warning';
