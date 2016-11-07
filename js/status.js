@@ -57,7 +57,8 @@ $.getJSON( "https://mf11api02.azurewebsites.net/api/deployments?sla=true&unit=mo
                     return false;
                 }
             });
-            row[++j] ='<td class="sla ' + status + '">' + slaValue.toString() + '</td>';
+            //row[++j] ='<td class="sla ' + status + '">' + slaValue.toString() + '</td>';
+            row[++j] ='<td class="sla ' + status + '"></td>';
         }
         row[++j] ='</tr>'; 
         $('#status_table').append(row.join(''));
