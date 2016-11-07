@@ -8,7 +8,7 @@
     width: 100%;
     background-color: #074E8C;
     z-index:9999;
-
+;
     // Positioning context for the mobile navigation icon
     position: fixed;
     
@@ -408,4 +408,7 @@ table {
             font-weight: 500;
         }
     }
+}
+table.center {
+    margin: 0 auto;
 }
